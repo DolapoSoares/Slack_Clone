@@ -1,12 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
 import './App.css';
+
+import {
+  Route,
+  Routes,
+  BrowserRouter,
+} from "react-router-dom";
+
+
+
 
 function App() {
   return (
     <div className="app">
-  
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Header />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
