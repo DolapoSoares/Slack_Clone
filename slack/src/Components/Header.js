@@ -16,6 +16,7 @@
       {/* Header Center */}
       <SearchHearder>
         <SearchIcon />
+        <input placeholder='Search slack clone'/>
       </SearchHearder>
      </HeaderContainer>
    )
