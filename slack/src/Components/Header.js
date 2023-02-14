@@ -26,6 +26,9 @@
 
 const SearchHearder = styled.div`
     color : white;
+    flex: 0.4;
+    opacity: 1;
+    border-radius: 5px;
 `
 
  const HeaderContainer = styled.div`
@@ -51,5 +54,9 @@ const SearchHearder = styled.div`
  `
 
  const HeadAvatar = styled(Avatar)`
+    cursor: pointer;
 
+    :hover {
+      opacity: 0.8;
+    }
  `;
