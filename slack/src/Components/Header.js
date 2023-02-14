@@ -1,23 +1,33 @@
  import React from 'react'
  import styled from "styled-components"
  import { Avatar } from "@mui/material"
- import AccessTimeIcon from "@mui/icons-material/AccessTime"
+ import AccessTimeSharpIcon from '@mui/icons-material/AccessTimeSharp';
+ import SearchIcon from "@mui/icons-material/Search"
  
  function Header() {
    return (
-     <HeaderStyle>
+     <HeaderContainer>
       {/* Header Left */}
       <HeaderLeft>
         <HeadAvatar />
-        <AccessTimeIcon />
+        <AccessTimeSharpIcon />
       </HeaderLeft>
-     </HeaderStyle>
+
+      {/* Header Center */}
+      <SearchHearder>
+        <SearchIcon />
+      </SearchHearder>
+     </HeaderContainer>
    )
  }
  
  export default Header;
 
- const HeaderStyle = styled.div`
+const SearchHearder = styled.div`
+    color : white;
+`
+
+ const HeaderContainer = styled.div`
     display: flex;
     position: fixed;
     width: 100%;
@@ -31,6 +41,7 @@
     display: flex;
     align-items: center;
     margin-left: 25px;
+    color: white;
 
     > .MuiSvgIcon-root {
       margin-left: auto;
