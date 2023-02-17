@@ -3,6 +3,7 @@
  import { Avatar } from "@mui/material"
  import AccessTimeSharpIcon from '@mui/icons-material/AccessTimeSharp';
  import SearchIcon from "@mui/icons-material/Search"
+ import HelpOutlineIcon from "@mui/icons-material/HelpOutline"
  
  function Header() {
    return (
@@ -18,6 +19,11 @@
         <SearchIcon />
         <input placeholder='Search slack clone'/>
       </SearchHearder>
+
+      {/* Header Right */}
+      <HeaderRight>
+        <HelpOutlineIcon />
+      </HeaderRight>
      </HeaderContainer>
    )
  }
@@ -29,6 +35,21 @@ const SearchHearder = styled.div`
     flex: 0.4;
     opacity: 1;
     border-radius: 5px;
+    text-align: center;
+    display: flex;
+    padding: 0 50px;
+    background-color: #421f44;
+    color: gray;
+    border: 1px gray solid; 
+
+    > input {
+      background-color: transparent ;
+      border: none;
+      text-align: center;
+      min-width: 30vw;
+      outline: none;
+      color: white;
+    }
 `
 
  const HeaderContainer = styled.div`
@@ -38,6 +59,7 @@ const SearchHearder = styled.div`
     padding: 10px 0;
     justify-content: space-between;
     background-color: var(--slack-color);
+    color: white;
 
  `
  const HeaderLeft = styled.div`
@@ -53,10 +75,14 @@ const SearchHearder = styled.div`
     }
  `
 
+ const HeaderRight = styled.div`
+
+ `
+
  const HeadAvatar = styled(Avatar)`
     cursor: pointer;
 
     :hover {
-      opacity: 0.8;
+      opacity: 0.7;
     }
  `;
