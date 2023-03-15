@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
 import Header from './Components/Header';
+import Sidebar from './Components/Sidebar'
+
+import styled from 'styled-components'
 
 import {
   Route,
@@ -14,13 +17,23 @@ import {
 function App() {
   return (
     <div className="app">
-      <BrowserRouter>
+    <BrowserRouter>
+       <AppBody>
+        <Header />
+        <Sidebar />
         <Routes>
-          <Route exact path="/" element={<Header />} />
+          <Route path="/" element={<Header />} />
         </Routes>
-      </BrowserRouter>
+       </AppBody>
+    </BrowserRouter>
     </div>
   );
 }
 
+
+
 export default App;
+
+const AppBody = styled.div`
+  display: flex;
+`
