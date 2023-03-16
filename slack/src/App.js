@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Header from './Components/Header';
 import Sidebar from './Components/Sidebar'
-
 import styled from 'styled-components'
 
 import {
@@ -36,4 +35,5 @@ export default App;
 
 const AppBody = styled.div`
   display: flex;
+  height: 100vh;
 `
