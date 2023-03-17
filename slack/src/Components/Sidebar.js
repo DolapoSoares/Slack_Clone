@@ -2,6 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecordSharp'
 import CreateIcon from '@mui/icons-material/Create'
+import SidebarLists from './SidebarLists'
+import InsertCommentIcon from "@mui/icons-material/InsertComment"
+import InboxIcon from "@mui/icons-material/Inbox"
+import DraftsIcon from "@mui/icons-material/Drafts"
+import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder"
+import PeopleALTIcon from "@mui/icons-material/PeopleAlt"
+import AppsIcon from "@mui/icons-material/Apps"
+import FileCopyIcon from "@mui/icons-material/FileCopy"
+import ExpandLessIcon from "@mui/icons-material/ExpandLess"
 
 const Sidebar = () => {
   return (
@@ -16,6 +25,16 @@ const Sidebar = () => {
             </SidebarHead1>
             <CreateIcon />
         </SidebarHeader>
+
+      <SidebarLists Icon={InsertCommentIcon} title="Threads"/>
+      <SidebarLists Icon={InboxIcon} title="Mentions & Reactions"/>
+      <SidebarLists Icon={DraftsIcon} title="SavedItems"/>
+      <SidebarLists Icon={BookmarkBorderIcon} title="Channel Browser"/>
+      <SidebarLists Icon={PeopleALTIcon} title="People & User's group"/>
+      <SidebarLists Icon={AppsIcon} title="Apps"/>
+      <SidebarLists Icon={FileCopyIcon} title="File Browser"/>
+      <SidebarLists Icon={ExpandLessIcon} title="Show less"/>
+
     </SidebarContainer>
   )
 }
@@ -59,6 +78,13 @@ const SidebarHead1 = styled.div`
       font-size: 13px;
       font-weight: 400;
       align-items: center;
+    }
+
+    > h3 > .MuiSvgIcon-root {
+      font-size: 14px;
+      margin-top: 1px;
+      margin-right: 2px;
+      color: green;
     }
 `
 
